@@ -1,0 +1,29 @@
+.content {
+    width: 40%;
+    margin: 40px auto;
+}
+
+.content *{
+    border-radius: 10px;
+}
+
+input {
+    display: block;
+    height: 40px;
+    width: 50%;
+    margin: 8px auto;
+}
+
+button {
+    width: 36px;
+}
+
+.numinput {
+    padding-top: 10px;
+}
+
+#output {
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
