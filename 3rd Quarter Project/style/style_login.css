@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@500&display=swap');
+
+html {
+    /* sets scroll behavior to smooth */
+    scroll-behavior: smooth;
+}
+
+body { 
+    /* sets background of webpage, sets margin to 0px */
+    background: url(../images/background.png) no-repeat top center;
+    background-size: cover;
+    background-attachment: scroll;
+    background-color: #00000032;
+    background-blend-mode: overlay;
+    margin: 0px;
+}
+
+header *, .navs, nav ul li a, footer {
+    /* sets containers display to inline */
+    display: inline-flex;
+    align-items: center;
+}
+
+header, p#heading, p#body, .login * {
+    font-family: 'Gantari', sans-serif;
+}
+
+header {
+    /* sets header's height to 55px, width to 100%, display to inline flex, align its items to center, 
+    set background color, padding, margin, position, and transition duration during style change*/
+    height: 55px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    background-color: #002557;
+    padding: 10px 0px 10px 0px;
+    margin: 0px;
+    position: relative;
+    transition: 0.4s;
+}
+
+h1 {
+    /* sets h1 text size to 25px, font weight to normal, color to white, display to inline, and the padding*/
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #cecece;
+    padding: 0px 0px 0px 20px;
+    display: inline;
+}
+
+header h1  {
+    /* sets margin of h1's in header */
+    margin: 0px;
+}
+
+header img {
+    /* sets padding of imgs in header*/
+    padding: 0px 0px 0px 33px;
+}
+
+nav {
+    /* sets nav font, container height to 30px, width to 100px, margin and padding to 0px all sides, transition duration to 0.4s,
+    box shadow, and background color, also brings container forward */
+    font-family: 'Prompt', sans-serif;
+    height: 30px;
+    width: 100%;
+    background-color: #cecece;
+    box-shadow: #002557 2px 2px 4px;
+    margin: 0px;
+    padding: 0px;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+nav img {
+    /* for all imgs in nav, sets display to inline block, sets padding */
+    padding: 0px 20px 0px 33px;
+    display: inline-block;
+}
+
+nav ul {
+    /* for all uls in nav, sets height to 100%, clears list style type, 
+    display to inline block, overflow to hidden, margin and padding to 0*/
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+  
+nav li {
+    /* for all li's in nav, sets height to 100%, float to left, and centers element vertically*/
+    height: 100%;
+    float: left;
+    vertical-align: middle;
+}
+
+nav li img {
+    /* for all imgs in li's in nav, sets right padding to 10 pixels*/
+    padding-right: 10px;
+}
+
+nav li a {
+    /* for all a's in li's nav, sets height and line height to 100%, display to inline block, color to dark gray,
+    aligns text to the center, left and right padding to 16 pixels, and text decoration to none*/
+    height: 100%;
+    line-height: 100%;
+    display: inline-block;
+    color: #30343b;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+}
+  
+nav li a:hover, nav li a:focus {
+    /* for all a's in li's in nav, when hovered or focused, sets bg colorto deep blue, color to white, centers itself vertically,
+    left and right padding to 16px, and transition duration to 0.2s*/
+    background-color: #002557;
+    color: #cecece;
+    vertical-align: middle;
+    padding: 0px 16px;
+    transition: 0.2s;
+}
+
+nav.sticky {
+    /* triggers when sticky class is added to nav, sets bg to a color gradient, height to 50px, position to fixed at 0px from left and
+    0px from top, width to 100%, padding to 0px, and display to inline flex*/
+    background-image: linear-gradient(to right, #cecece, #cecece, #002557);
+    height: 50px;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 0px;
+    display: inline-flex;
+}
+
+nav.sticky li a:hover {
+    /* triggers when sticky class is added to nav and is hovered, centers itself vertically, sets left and right padding to 16 pixels,
+    and trasition duration to 0.2s */
+    vertical-align: middle;
+    padding: 0px 16px;
+    transition: 0.2s;
+}
+
+#navbar ul li a img#home {
+    /* creates image sprite of a blue home icon*/
+    width: 32px;
+    height: 32px;
+    background: url('../images/img_navbar.png') no-repeat 1px 1px;
+}
+
+#navbar ul li a img#help {
+    /* creates image sprite of a blue handshake icon*/
+    width: 32px;
+    height: 32px;
+    background: url('../images/img_navbar.png') no-repeat -32px 1px;
+}
+
+#navbar ul li a img#contact {
+    /* creates image sprite of a blue telephone icon*/
+    width: 32px;
+    height: 32px;
+    background: url('../images/img_navbar.png') no-repeat -65px 1px;
+}
+
+#navbar ul li a:hover img#home {
+    /* sets image sprite to a white home icon when hovered*/
+    width: 32px;
+    height: 32px;
+    background: url('../images/img_navbar.png') no-repeat 1px -32px;
+}
+
+#navbar ul li a:hover img#help {
+    /* sets image sprite to a white handshake icon when hovered*/
+    width: 32px;
+    height: 32px;
+    background: url('../images/img_navbar.png') no-repeat -32px -32px;
+}
+
+#navbar ul li a:hover img#contact {
+    /* sets image sprite to a white telephone icon when hovered*/
+    width: 32px;
+    height: 32px;
+    background: url('../images/img_navbar.png') no-repeat -65px -32px;
+}
+
+#navbar ul li img {
+    /* scales all image sprites in navbar by 0.5, sets margin to 0px, and padding to 1px at all sides*/
+    transform: scale(0.5);
+    margin: 0px;
+    padding: 1px;
+}
+
+.contributemethod {
+    /* hides overflow, divides container into two columns with spacing of 10px between, 
+    first column width takes 30% and second column takes rest of container width */
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-gap: 10px;
+    overflow: hidden;
+}
+
+a {
+    /* for all non overwritten a elements, sets text decor to none, text color to white, and transition duration to 0.2s*/
+    text-decoration: none;
+    color: #cecece;
+    transition: 0.2s;
+}
+
+a:hover {
+    /* for all non overwritten a elements when hovered, sets bg color to white, and text color to dark gray*/
+    background-color: #cecece;
+    color: #30343b;
+}
+
+article {
+    /* for all non overwritten articles, assigns padding style */
+    padding: 0px 40px 0px 25px;
+}
+
+p#heading {
+    /* for all p that are headings, sets text size to 24px, text color to deep blue, bg color to white, padding, bottom margin, and width */
+    font-size: 24px;
+    color: #002557;
+    background-color: #cecece;
+    padding: 4px 16px;
+    margin-bottom: 0px;
+    width: fit-content;
+}
+
+hr {
+    /* for all non overwritten hr's, sets 1 pixel solid white border, 25% right padding and margin*/
+    border: 1px solid #cecece;
+    padding-right: 25%;
+    margin: 20px 0px;
+}
+
+.bodycontainer {
+    /* for elements with class bodycontainer, hides overflow, sets bg to color gradient, 
+    adds 6px solid white border to the top and left, divides container into two columns with spacing of 20px between, 
+    first column width takes 360px and second column takes rest of container width */
+    background-color: #002557;
+    border-top: 6px solid #cecece;
+    padding: 10px 6px 0.5px 6px;
+    overflow: hidden;
+}
+
+p#body {
+    /* for all p that have body id, sets text size to 18px, text color to white, justifies text, sets padding and top margin */
+    font-size: 16px;
+    color: #cecece;
+    text-align: justify;
+    padding: 0px 10px;
+    margin-top: 0px;
+}
+
+p#year {
+    /* for all p that have year id, sets text size to 22px, text color to white, boldens text, 
+    aligns text to the left, sets padding and margin */
+    font-size: 22px;
+    color: #cecece;
+    font-weight: bold;
+    text-align: left;
+    padding: 0px 10px 0px 10px;
+    margin: 0px;
+}
+
+p#title {
+    /* for all p that have title id, sets width to 50%, text size to 20px, font to Droid Serif, text color to white, 
+    border to 1 pixel solid white, sets margin and padding */
+    width: 50%;
+    font-size: 20px;
+    font-family: 'Gantari', sans-serif;
+    color: #cecece;
+    border: #cecece solid 1px;
+    margin: 20px 600px 10px 10px;
+    padding: 8px 15px;
+}
+
+
+p#ref {
+    /* for all p elements with ref (reference) id, sets font size to 16px, color to white, 
+    top margin to 0px, bottom margin to 2px, justifies text, and sets padding */
+    font-size: 16px;
+    color: #cecece;
+    text-align: justify;
+    padding: 0px 10px;
+    margin-top: 0px; margin-bottom: 2px;
+}
+
+.references {
+    /* for reference container, sets bg color to deep blue, top and left border to 6px solid white, display to inline block,
+    width to 100%, adds padding, hides overflow*/
+    background-color: #002557;
+    border-left: 6px solid #cecece; 
+    border-top: 6px solid #cecece;
+    padding: 5px 0px;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.references ul{
+    /* for reference ul, removes margin top*/
+    margin-top: 0px;
+}
+
+.references ul li {
+    /* for li in reference ul, sets text color to white, removes bottom padding*/
+    color: #cecece;
+    padding-bottom: 0px;
+}
+
+
+footer {
+    /* sets footer font and font size, height to 60px, width to 100%, position to absolute, bg color to deep blue, text color to white,
+    adds white shadow and padding,
+    divides footer into two columns with equal width separated by 60% of the parent's width in the middle */
+    font-family: "Gantari", sans-serif;
+    height: 60px;
+    width: 100%;
+    padding: 20px 0px 0px 0px;
+    position: absolute;
+    bottom: 0%;
+    background-color: #002557;
+    color: #cecece;
+    box-shadow: #cecece 0px -1px 3px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60%;
+}
+
+footer ul li.socmed, footer ul li.socmed a {
+    /* formats lists in footer */
+    display: flex;
+    align-items: center;
+}
+
+ul#socmeds {
+    /* positions socmed links at an absolute 2% from left, adds 7px bottom padding, and sets display as inline block*/
+    position: absolute;
+    left: 2%;
+    padding-bottom: 7px;
+    display: inline-block;
+
+}
+
+ul#info {
+    /* positions infocard at an absolute 2% from right, adds 5px bottom padding, and sets display as inline block*/
+    position: absolute;
+    right: 2%;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+ul#info li {
+    /* for all li inside ul with info id, aligns text to the right, adds padding */
+    padding: 0px 1px;
+    text-align: right;
+}
+
+footer ul {
+    /* for all ul in footer, clears list style, adds padding, removes any margin */
+    list-style-type: none;
+    padding: 5px 0px 0px 0px;
+    margin: 0px;
+}
+
+footer ul li {
+    /* for all li in a footer ul, sets text size to 12px, weight to normal, color to white, display to flex, 
+    transition duration to 0.1s, centers all items inside vertically, and adds margin and padding*/
+    font-size: 14px;
+    font-weight: normal;
+    color: #cecece;
+    margin: 0px 10px;
+    padding: 4px 7px 4px 5px;
+    display: flex;
+    align-items: center;
+    transition: 0.1s;
+    border-radius: 4px;
+}
+
+footer ul li.userlinks, footer ul li.wfp-links{
+    /* adds padding for all ul links in footer*/
+    padding: 0px 7px 0px 5px;
+}
+
+footer ul li a {
+    /* sets text size to 13px in all a's inside an li of a footer ul */
+    font-size: 13px;
+}
+
+li.userlinks img#contact, li.wfp-links img#contact, li.userlinks:hover img#contact:hover, li.wfp-links:hover img#contact:hover {
+    /* creates 16px by 16px image sprite for white contact icon */
+    margin: 1px 2px 1px 5px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -34px 0px;
+}
+
+li.userlinks img#mail, li.wfp-links img#mail, li.userlinks:hover img#mail:hover, li.wfp-links:hover img#mail:hover {
+    /* creates 16px by 16px image sprite for white mail icon */
+    margin: 1px 2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -51px 0px;
+}
+
+li.userlinks img#fb, li.wfp-links img#fb, li.userlinks:hover img#fb:hover, li.wfp-links:hover img#fb:hover, div.text ul li a img#fb {
+    /* creates 16px by 16px image sprite for white facebook icon */
+    margin: 1px 2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -68px 0px;
+}
+
+li.userlinks img#dcrd, li.userlinks:hover img#dcrd:hover, div.text ul li a img#dcrd {
+    /* creates 16px by 16px image sprite for white discord icon */
+    margin: 1px 2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -136px 0px;
+}
+
+li.userlinks img#yt, li.userlinks:hover img#yt:hover, li.wfp-links img#yt, li.wfp-links:hover img#yt:hover, div.text ul li a img#yt {
+    /* creates 16px by 16px image sprite for white youtube icon */
+    margin: 1px 2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -85px 0px;
+}
+
+li.wfp-links img#twt, li.wfp-links:hover img#twt:hover, div.text ul li a img#twt {
+    /* creates 16px by 16px image sprite for white twitter icon */
+    margin: 1px 2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -102px 0px;
+}
+
+li.wfp-links img#lnkd, li.wfp-links:hover img#lnkd:hover, div.text ul li a img#lnkd {
+    /* creates 16px by 16px image sprite for white linkedin icon */
+    margin: 1px 2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -119px 0px;
+}
+
+div.text ul li a img#fb, div.text ul li a img#twt, div.text ul li a img#yt, div.text ul li a img#dcrd, div.text ul li a img#lnkd, div.text ul li a img#lnkd {
+    /* magnifies all contact icons in the contact us article by 1.25 */
+    transform: scale(1.25);
+}
+
+li.userlinks img#author{
+    /* creates image 16px by 16px sprite for white author icon */
+    margin: 1px 5px 1px 0px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat 0px 0px;
+}
+  
+li.wfp-links img#wfp-footer {
+    /* creates 16px by 16px image sprite for white wfp icon */
+    margin: 1px 5px 1px 0px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -17px 0px;
+}
+
+div.text ul li a img:hover {
+    /* clears unwanted remnant hover styles by overwriting */
+    text-decoration: none;
+    background-color: transparent;
+}
+
+li.userlinks:hover, li.wfp-links:hover {
+    /* when footer links are hovered, sets entire container bg color to white, text color to deep blue, adds padding and bottom margin */
+    background-color: #cecece;
+    color: #002557;
+    padding: 3px 7px 0px 5px;
+    margin-bottom: 2px;
+}
+
+li.userlinks:hover img#contact, li.wfp-links:hover img#contact{
+    /* creates 16px by 16px image sprite for blue contact icon */
+    margin: 1px 2px 1px 5px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -34px -17px;
+}
+
+li.userlinks:hover img#mail, li.wfp-links:hover img#mail{
+    /* creates 16px by 16px image sprite for blue mail icon */
+    margin: 1px 2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -51px -17px;
+}
+
+li.userlinks:hover img#fb, li.wfp-links:hover img#fb, div.text ul li a img#fb:hover{
+    /* creates 16px by 16px image sprite for blue facebook icon */
+    margin: 1px 2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -68px -17px;
+}
+
+li.userlinks:hover img#dcrd, div.text ul li a img#dcrd:hover{
+    /* creates 16px by 16px image sprite for blue discord icon */
+    margin: 1px 2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -136px -17px;
+}
+
+li.userlinks:hover img#yt, li.wfp-links:hover img#yt, div.text ul li a img#yt:hover{
+    /* creates 16px by 16px image sprite for blue youtube icon */
+    margin: 1px 2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -85px -17px;
+}
+
+li.wfp-links:hover img#twt, div.text ul li a img#twt:hover{
+    /* creates 16px by 16px image sprite for blue twitter icon */
+    margin: 1px 2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -102px -17px;
+}
+
+li.wfp-links:hover img#lnkd, div.text ul li a img#lnkd:hover{
+    /* creates 16px by 16px image sprite for blue linkedin icon */
+    margin: 1px 2px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -119px -17px;
+}
+
+li.userlinks:hover img#author{
+    /* creates 16px by 16px image sprite for blue author icon */
+    margin: 1px 5px 1px 0px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat 0px -17px;
+}
+  
+li.wfp-links:hover img#wfp-footer {
+    /* creates 16px by 16px image sprite for blue wfp icon */
+    margin: 1px 5px 1px 0px;
+    width: 16px;
+    height: 16px;
+    background: url('../images/icons_footer.png') no-repeat -17px -17px;
+}
+
+.login {
+    margin-top: 40px;
+    width: 70%;
+    justify-self: right;
+    padding-right: 50px;
+}
+
+input {
+    display: block;
+    border-radius: 0px;
+    height: 36px;
+    width: 70%;
+    padding-left: 10px;
+    margin: 5px 0px 2px 10px;
+    font-size: 18px;
+    background-color: #cecece;
+    outline: none;
+    box-shadow: 0px 0px 5px #cecece;
+    border: 2px solid #cecece;
+}
+
+input:focus {
+    background-color: #cae1ff;
+    outline: none;
+    border: 2px solid #002557;
+}
+
+p#alert, p#label_user, p#label_pass {
+    color: #cecece;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+p#alert {
+    margin-top: 2px;
+}
+
+a#alt_links {
+    font-size: 14px;
+    color: #cececebe;
+    margin: 0px 10px;
+}
+
+a#alt_links:hover {
+    background-color: #00000000;
+    text-decoration: underline;
+}
+
+#logButton {
+    display: block;
+    background-color: #cecece;
+    box-shadow: 0px 0px 5px #cecece;
+    border: none;
+    font-size: 16px;
+    margin: 20px 0px 36px 10px;
+    padding: 8px 20px;
+}
+
+#logButton:hover {
+    background-color: #cae1ff;
+}
+
+#logButton:active {
+    background-color: #b2d1fd;
+}
+
+p#loginhead {
+    /* for all p that are headings, sets text size to 24px, text color to deep blue, bg color to white, padding, bottom margin, and width */
+    font-size: 24px;
+    color: #cecece;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0px 10px;
+    margin: 0px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 58% 1fr;
+    grid-gap: 20px;
+    padding-bottom: 60px;
+}
+
+#logoAB {
+    display: inline;
+    vertical-align: middle;
+    padding: 4px 8px 0px 10px;
+}
+
+#loginheader {
+    display: inline-block;
+    vertical-align: middle;
+}
